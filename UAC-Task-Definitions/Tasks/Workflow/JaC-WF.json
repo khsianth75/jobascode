@@ -1,0 +1,177 @@
+{
+    "type": "taskWorkflow",
+    "actions": {
+        "abortActions": [],
+        "emailNotifications": [],
+        "setVariableActions": [],
+        "snmpNotifications": [],
+        "systemOperations": []
+    },
+    "calculateCp": false,
+    "calendar": null,
+    "changeHistory": [],
+    "cpDuration": null,
+    "cpDurationUnit": "Minutes",
+    "created": "2025-07-04 12:48:06 +0200",
+    "createdBy": "karthik",
+    "criticalEndpoints": [],
+    "customChoiceField1": {
+        "label": null,
+        "value": null
+    },
+    "customField1": {
+        "label": "Agency Code",
+        "value": null
+    },
+    "customField2": {
+        "label": "Output Link",
+        "value": null
+    },
+    "efDayConstraint": "None",
+    "efDuration": "00:00:00:00",
+    "efEnabled": false,
+    "efNthAmount": 5,
+    "efOffsetDuration": null,
+    "efOffsetDurationUnit": "Minutes",
+    "efOffsetPercentage": 0,
+    "efOffsetType": "Percentage",
+    "efTime": "00:00",
+    "efType": "Time",
+    "enforceVariables": false,
+    "exclusiveTasks": [],
+    "exclusiveWithSelf": false,
+    "executionRestriction": "None",
+    "exportReleaseLevel": "8.0.0.0",
+    "exportTable": "ops_task_workflow",
+    "firstRun": "",
+    "holdResources": false,
+    "instanceWait": "-- None --",
+    "instanceWaitLookup": "Task",
+    "lastRun": "",
+    "layoutOption": "-- None --",
+    "lfDayConstraint": "None",
+    "lfDuration": "00:00:00:00",
+    "lfEnabled": false,
+    "lfNthAmount": 5,
+    "lfOffsetDuration": null,
+    "lfOffsetDurationUnit": "Minutes",
+    "lfOffsetPercentage": 0,
+    "lfOffsetType": "Percentage",
+    "lfTime": "00:00",
+    "lfType": "Time",
+    "lockVariables": false,
+    "logLevel": "Inherited",
+    "lsDayConstraint": "None",
+    "lsDuration": "00:00:00:00",
+    "lsEnabled": false,
+    "lsNthAmount": 5,
+    "lsTime": "00:00",
+    "lsType": "Time",
+    "name": "JaC-WF",
+    "notes": [],
+    "numberOfTasks": 3,
+    "opswiseGroups": [
+        "KM-Job-as-Code"
+    ],
+    "overrideCalendar": false,
+    "overrideInstanceWait": "No",
+    "resPriority": 10,
+    "resPriorityVar": null,
+    "resolveNameImmediately": false,
+    "restrictionPeriod": "None",
+    "restrictionPeriodAfterDate": null,
+    "restrictionPeriodAfterTime": null,
+    "restrictionPeriodBeforeDate": null,
+    "restrictionPeriodBeforeTime": null,
+    "restrictionPeriodDateList": [],
+    "retainSysIds": true,
+    "runCount": 0,
+    "runCriteria": [],
+    "runTime": 0,
+    "simulation": false,
+    "skippedOption": "Show Skipped",
+    "startHeld": false,
+    "startHeldReason": null,
+    "stepActions": [],
+    "stepConditions": [],
+    "summary": null,
+    "sysId": "4a068f0f5ccc48d3bc45df106f3bbd92",
+    "timeZonePref": "-- System Default --",
+    "twDelayAmount": null,
+    "twDelayDuration": "00:00:00:00",
+    "twDelayType": "None",
+    "twWaitAmount": null,
+    "twWaitDayConstraint": "None",
+    "twWaitDuration": "00:00:00:00",
+    "twWaitTime": "00:00",
+    "twWaitType": "None",
+    "twWorkflowOnly": "-- System Default --",
+    "updated": "2025-12-19 13:05:41 +0100",
+    "updatedBy": "karthik",
+    "userEstimatedDuration": null,
+    "variables": [],
+    "version": 8,
+    "virtualResources": [],
+    "workflowEdges": [
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "JaC-Check-CPU-Utilization",
+                "value": "2"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "JaC-Create Approval",
+                "value": "4"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "JaC-Create Approval",
+                "value": "4"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "JaC-validate-report",
+                "value": "3"
+            }
+        }
+    ],
+    "workflowVertices": [
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "JaC-Check-CPU-Utilization"
+            },
+            "vertexId": "2",
+            "vertexX": "77.5",
+            "vertexY": "25"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "JaC-validate-report"
+            },
+            "vertexId": "3",
+            "vertexX": "436.5",
+            "vertexY": "25"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "JaC-Create Approval"
+            },
+            "vertexId": "4",
+            "vertexX": "268",
+            "vertexY": "25"
+        }
+    ]
+}

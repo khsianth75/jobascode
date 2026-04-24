@@ -7,7 +7,7 @@
         "snmpNotifications": [],
         "systemOperations": []
     },
-    "agent": "Ansible",
+    "agent": "Airflow",
     "agentCluster": null,
     "agentClusterVar": null,
     "agentVar": null,

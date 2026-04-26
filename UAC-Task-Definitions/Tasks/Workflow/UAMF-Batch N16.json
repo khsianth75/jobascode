@@ -1,0 +1,153 @@
+{
+    "type": "taskWorkflow",
+    "actions": {
+        "abortActions": [],
+        "emailNotifications": [],
+        "setVariableActions": [],
+        "snmpNotifications": [],
+        "systemOperations": []
+    },
+    "calculateCp": false,
+    "calendar": null,
+    "changeHistory": [],
+    "cpDuration": null,
+    "cpDurationUnit": "Minutes",
+    "created": "2026-04-17 15:02:50 +0200",
+    "createdBy": "thurstan",
+    "criticalEndpoints": [],
+    "customChoiceField1": {
+        "label": null,
+        "value": null
+    },
+    "customField1": {
+        "label": "Agency Code",
+        "value": null
+    },
+    "customField2": {
+        "label": "Output Link",
+        "value": null
+    },
+    "efDayConstraint": "None",
+    "efDuration": "00:00:00:00",
+    "efEnabled": false,
+    "efNthAmount": 5,
+    "efOffsetDuration": null,
+    "efOffsetDurationUnit": "Minutes",
+    "efOffsetPercentage": 0,
+    "efOffsetType": "Percentage",
+    "efTime": "00:00",
+    "efType": "Time",
+    "enforceVariables": false,
+    "exclusiveTasks": [],
+    "exclusiveWithSelf": false,
+    "executionRestriction": "None",
+    "exportReleaseLevel": "8.0.0.0",
+    "exportTable": "ops_task_workflow",
+    "firstRun": "",
+    "holdResources": false,
+    "instanceWait": "-- None --",
+    "instanceWaitLookup": "Task",
+    "lastRun": "",
+    "layoutOption": "-- None --",
+    "lfDayConstraint": "None",
+    "lfDuration": "00:00:00:00",
+    "lfEnabled": false,
+    "lfNthAmount": 5,
+    "lfOffsetDuration": null,
+    "lfOffsetDurationUnit": "Minutes",
+    "lfOffsetPercentage": 0,
+    "lfOffsetType": "Percentage",
+    "lfTime": "00:00",
+    "lfType": "Time",
+    "lockVariables": false,
+    "logLevel": "Inherited",
+    "lsDayConstraint": "None",
+    "lsDuration": "00:00:00:00",
+    "lsEnabled": false,
+    "lsNthAmount": 5,
+    "lsTime": "00:00",
+    "lsType": "Time",
+    "name": "UAMF-Batch N16",
+    "notes": [],
+    "numberOfTasks": 2,
+    "opswiseGroups": [
+        "Velliv"
+    ],
+    "overrideCalendar": false,
+    "overrideInstanceWait": "No",
+    "resPriority": 10,
+    "resPriorityVar": null,
+    "resolveNameImmediately": false,
+    "restrictionPeriod": "None",
+    "restrictionPeriodAfterDate": null,
+    "restrictionPeriodAfterTime": null,
+    "restrictionPeriodBeforeDate": null,
+    "restrictionPeriodBeforeTime": null,
+    "restrictionPeriodDateList": [],
+    "retainSysIds": true,
+    "runCount": 0,
+    "runCriteria": [],
+    "runTime": 0,
+    "simulation": false,
+    "skippedOption": "Show Skipped",
+    "startHeld": false,
+    "startHeldReason": null,
+    "stepActions": [],
+    "stepConditions": [],
+    "summary": " Use Case 3",
+    "sysId": "ba84995c40fb4ffaa49ba577116e3267",
+    "timeZonePref": "-- System Default --",
+    "twDelayAmount": null,
+    "twDelayDuration": "00:00:00:00",
+    "twDelayType": "None",
+    "twWaitAmount": null,
+    "twWaitDayConstraint": "None",
+    "twWaitDuration": "00:00:00:00",
+    "twWaitTime": "00:00",
+    "twWaitType": "None",
+    "twWorkflowOnly": "-- System Default --",
+    "updated": "2026-04-21 16:31:58 +0200",
+    "updatedBy": "thurstan",
+    "userEstimatedDuration": null,
+    "variables": [],
+    "version": 4,
+    "virtualResources": [],
+    "workflowEdges": [
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QDNSD100",
+                "value": "27"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QDNSD105",
+                "value": "28"
+            }
+        }
+    ],
+    "workflowVertices": [
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QDNSD100"
+            },
+            "vertexId": "27",
+            "vertexX": "32.5",
+            "vertexY": "25"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QDNSD105"
+            },
+            "vertexId": "28",
+            "vertexX": "150.5",
+            "vertexY": "25"
+        }
+    ]
+}

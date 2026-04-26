@@ -1,0 +1,421 @@
+{
+    "type": "taskWorkflow",
+    "actions": {
+        "abortActions": [],
+        "emailNotifications": [],
+        "setVariableActions": [],
+        "snmpNotifications": [],
+        "systemOperations": []
+    },
+    "calculateCp": false,
+    "calendar": null,
+    "changeHistory": [],
+    "cpDuration": null,
+    "cpDurationUnit": "Minutes",
+    "created": "2026-04-16 18:02:51 +0200",
+    "createdBy": "thurstan",
+    "criticalEndpoints": [],
+    "customChoiceField1": {
+        "label": null,
+        "value": null
+    },
+    "customField1": {
+        "label": "Agency Code",
+        "value": null
+    },
+    "customField2": {
+        "label": "Output Link",
+        "value": null
+    },
+    "efDayConstraint": "None",
+    "efDuration": "00:00:00:00",
+    "efEnabled": false,
+    "efNthAmount": 5,
+    "efOffsetDuration": null,
+    "efOffsetDurationUnit": "Minutes",
+    "efOffsetPercentage": 0,
+    "efOffsetType": "Percentage",
+    "efTime": "00:00",
+    "efType": "Time",
+    "enforceVariables": false,
+    "exclusiveTasks": [],
+    "exclusiveWithSelf": false,
+    "executionRestriction": "None",
+    "exportReleaseLevel": "8.0.0.0",
+    "exportTable": "ops_task_workflow",
+    "firstRun": "",
+    "holdResources": false,
+    "instanceWait": "-- None --",
+    "instanceWaitLookup": "Task",
+    "lastRun": "",
+    "layoutOption": "-- None --",
+    "lfDayConstraint": "None",
+    "lfDuration": "00:00:00:00",
+    "lfEnabled": false,
+    "lfNthAmount": 5,
+    "lfOffsetDuration": null,
+    "lfOffsetDurationUnit": "Minutes",
+    "lfOffsetPercentage": 0,
+    "lfOffsetType": "Percentage",
+    "lfTime": "00:00",
+    "lfType": "Time",
+    "lockVariables": false,
+    "logLevel": "Inherited",
+    "lsDayConstraint": "None",
+    "lsDuration": "00:00:00:00",
+    "lsEnabled": false,
+    "lsNthAmount": 5,
+    "lsTime": "00:00",
+    "lsType": "Time",
+    "name": "Application ZPNSM510A",
+    "notes": [],
+    "numberOfTasks": 12,
+    "opswiseGroups": [
+        "Velliv"
+    ],
+    "overrideCalendar": false,
+    "overrideInstanceWait": "No",
+    "resPriority": 10,
+    "resPriorityVar": null,
+    "resolveNameImmediately": false,
+    "restrictionPeriod": "None",
+    "restrictionPeriodAfterDate": null,
+    "restrictionPeriodAfterTime": null,
+    "restrictionPeriodBeforeDate": null,
+    "restrictionPeriodBeforeTime": null,
+    "restrictionPeriodDateList": [],
+    "retainSysIds": true,
+    "runCount": 0,
+    "runCriteria": [],
+    "runTime": 0,
+    "simulation": false,
+    "skippedOption": "Show Skipped",
+    "startHeld": false,
+    "startHeldReason": null,
+    "stepActions": [],
+    "stepConditions": [],
+    "summary": " Use Case 1",
+    "sysId": "1cefd90954044596a41722572f4ebbe4",
+    "timeZonePref": "-- System Default --",
+    "twDelayAmount": null,
+    "twDelayDuration": "00:00:00:00",
+    "twDelayType": "None",
+    "twWaitAmount": null,
+    "twWaitDayConstraint": "None",
+    "twWaitDuration": "00:00:00:00",
+    "twWaitTime": "00:00",
+    "twWaitType": "None",
+    "twWorkflowOnly": "-- System Default --",
+    "updated": "2026-04-21 16:45:07 +0200",
+    "updatedBy": "thurstan",
+    "userEstimatedDuration": null,
+    "variables": [],
+    "version": 8,
+    "virtualResources": [],
+    "workflowEdges": [
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPPEC512",
+                "value": "9"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPPEE512",
+                "value": "11"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPPEC513",
+                "value": "10"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPPEE512",
+                "value": "11"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPPEE512",
+                "value": "11"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "END",
+                "value": "12"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPNSE512",
+                "value": "6"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "END",
+                "value": "12"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPNSM510",
+                "value": "2"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPNSM512",
+                "value": "3"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPNSM512",
+                "value": "3"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPNSR512",
+                "value": "4"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "START APP",
+                "value": "13"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPNSM510",
+                "value": "2"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPNSR512",
+                "value": "4"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "XPNSG512",
+                "value": "27"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPNSG512",
+                "value": "27"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "XPPEM512",
+                "value": "28"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPPEM512",
+                "value": "28"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "XPPEP512",
+                "value": "29"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPPEP512",
+                "value": "29"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPPEC512",
+                "value": "9"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPPEP512",
+                "value": "29"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPPEC513",
+                "value": "10"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPNSG512",
+                "value": "27"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPNSE512",
+                "value": "6"
+            }
+        }
+    ],
+    "workflowVertices": [
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPNSM510"
+            },
+            "vertexId": "2",
+            "vertexX": "155",
+            "vertexY": "182"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPNSM512"
+            },
+            "vertexId": "3",
+            "vertexX": "274",
+            "vertexY": "182"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPNSR512"
+            },
+            "vertexId": "4",
+            "vertexX": "392.5",
+            "vertexY": "182"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPNSE512"
+            },
+            "vertexId": "6",
+            "vertexX": "670",
+            "vertexY": "270.5"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPPEC512"
+            },
+            "vertexId": "9",
+            "vertexX": "1030",
+            "vertexY": "30"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPPEC513"
+            },
+            "vertexId": "10",
+            "vertexX": "1030",
+            "vertexY": "170"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPPEE512"
+            },
+            "vertexId": "11",
+            "vertexX": "1390.5",
+            "vertexY": "10"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "END"
+            },
+            "vertexId": "12",
+            "vertexX": "1400",
+            "vertexY": "260"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "START APP"
+            },
+            "vertexId": "13",
+            "vertexX": "34.5",
+            "vertexY": "182"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "XPNSG512"
+            },
+            "vertexId": "27",
+            "vertexX": "523.5",
+            "vertexY": "182"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "XPPEM512"
+            },
+            "vertexId": "28",
+            "vertexX": "667.5",
+            "vertexY": "103.5"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "XPPEP512"
+            },
+            "vertexId": "29",
+            "vertexX": "810.5",
+            "vertexY": "103.5"
+        }
+    ]
+}

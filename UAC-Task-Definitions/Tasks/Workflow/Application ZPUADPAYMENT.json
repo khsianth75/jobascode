@@ -1,0 +1,404 @@
+{
+    "type": "taskWorkflow",
+    "actions": {
+        "abortActions": [],
+        "emailNotifications": [],
+        "setVariableActions": [],
+        "snmpNotifications": [],
+        "systemOperations": [
+            {
+                "agent": null,
+                "agentCluster": null,
+                "agentClusterVar": null,
+                "agentVar": null,
+                "description": null,
+                "execCommand": "Cancel",
+                "execCriteria": "Oldest Active Instance",
+                "execId": null,
+                "execLookupOption": "Instance Name",
+                "execName": null,
+                "execWorkflowName": null,
+                "execWorkflowNameCond": "Equals",
+                "exitCodes": null,
+                "inheritance": "Self",
+                "limit": null,
+                "notificationOption": "Operation Failure",
+                "notifyOnEarlyFinish": false,
+                "notifyOnLateFinish": false,
+                "notifyOnLateStart": false,
+                "notifyOnProjectedLate": false,
+                "operation": "Launch Task",
+                "overrideTriggerDateOffset": null,
+                "overrideTriggerDateTime": false,
+                "overrideTriggerTime": "00:00",
+                "status": "Running/Problems",
+                "sysId": "b7be248a59f145d6b1e3400eca1c0776",
+                "task": "Send SMS to Admin",
+                "taskLimitType": "Unlimited",
+                "taskVar": null,
+                "trigger": null,
+                "triggerVar": null,
+                "variables": [
+                    {
+                        "name": "failedtask",
+                        "value": "${ops_task_name}"
+                    }
+                ],
+                "variablesUnresolved": false,
+                "vertexSelection": false,
+                "vertices": [],
+                "virtualResource": null,
+                "virtualResourceVar": null
+            }
+        ]
+    },
+    "calculateCp": false,
+    "calendar": null,
+    "changeHistory": [],
+    "cpDuration": null,
+    "cpDurationUnit": "Minutes",
+    "created": "2026-04-16 18:03:34 +0200",
+    "createdBy": "thurstan",
+    "criticalEndpoints": [],
+    "customChoiceField1": {
+        "label": null,
+        "value": null
+    },
+    "customField1": {
+        "label": "Agency Code",
+        "value": null
+    },
+    "customField2": {
+        "label": "Output Link",
+        "value": null
+    },
+    "efDayConstraint": "None",
+    "efDuration": "00:00:00:00",
+    "efEnabled": false,
+    "efNthAmount": 5,
+    "efOffsetDuration": null,
+    "efOffsetDurationUnit": "Minutes",
+    "efOffsetPercentage": 0,
+    "efOffsetType": "Percentage",
+    "efTime": "00:00",
+    "efType": "Time",
+    "enforceVariables": false,
+    "exclusiveTasks": [],
+    "exclusiveWithSelf": false,
+    "executionRestriction": "None",
+    "exportReleaseLevel": "8.0.0.0",
+    "exportTable": "ops_task_workflow",
+    "firstRun": "",
+    "holdResources": false,
+    "instanceWait": "-- None --",
+    "instanceWaitLookup": "Task",
+    "lastRun": "",
+    "layoutOption": "-- None --",
+    "lfDayConstraint": "None",
+    "lfDuration": "00:00:00:00",
+    "lfEnabled": false,
+    "lfNthAmount": 5,
+    "lfOffsetDuration": null,
+    "lfOffsetDurationUnit": "Minutes",
+    "lfOffsetPercentage": 0,
+    "lfOffsetType": "Percentage",
+    "lfTime": "00:00",
+    "lfType": "Time",
+    "lockVariables": false,
+    "logLevel": "Inherited",
+    "lsDayConstraint": "None",
+    "lsDuration": "00:00:00:00",
+    "lsEnabled": false,
+    "lsNthAmount": 5,
+    "lsTime": "00:00",
+    "lsType": "Time",
+    "name": "Application ZPUADPAYMENT",
+    "notes": [],
+    "numberOfTasks": 10,
+    "opswiseGroups": [
+        "Velliv"
+    ],
+    "overrideCalendar": false,
+    "overrideInstanceWait": "No",
+    "resPriority": 10,
+    "resPriorityVar": null,
+    "resolveNameImmediately": false,
+    "restrictionPeriod": "None",
+    "restrictionPeriodAfterDate": null,
+    "restrictionPeriodAfterTime": null,
+    "restrictionPeriodBeforeDate": null,
+    "restrictionPeriodBeforeTime": null,
+    "restrictionPeriodDateList": [],
+    "retainSysIds": true,
+    "runCount": 0,
+    "runCriteria": [],
+    "runTime": 0,
+    "simulation": false,
+    "skippedOption": "Show Skipped",
+    "startHeld": false,
+    "startHeldReason": null,
+    "stepActions": [],
+    "stepConditions": [],
+    "summary": " Use Case 2",
+    "sysId": "170dfff17162473b8bfe8a683f3ecb25",
+    "timeZonePref": "-- System Default --",
+    "twDelayAmount": null,
+    "twDelayDuration": "00:00:00:00",
+    "twDelayType": "None",
+    "twWaitAmount": null,
+    "twWaitDayConstraint": "None",
+    "twWaitDuration": "00:00:00:00",
+    "twWaitTime": "00:00",
+    "twWaitType": "None",
+    "twWorkflowOnly": "-- System Default --",
+    "updated": "2026-04-24 17:41:52 +0200",
+    "updatedBy": "thurstan",
+    "userEstimatedDuration": null,
+    "variables": [],
+    "version": 15,
+    "virtualResources": [],
+    "workflowEdges": [
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPUAC140",
+                "value": "4"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPUAE140",
+                "value": "5"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPUAD140",
+                "value": "3"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "XPUAG140",
+                "value": "24"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPUAG140",
+                "value": "24"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPUAC140",
+                "value": "4"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPUAG140",
+                "value": "24"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "XPUAD145",
+                "value": "22"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPUAD145",
+                "value": "22"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "XPUAD147",
+                "value": "23"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPUAD147",
+                "value": "23"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "XPUAP147",
+                "value": "25"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPUAP147",
+                "value": "25"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPUAC147",
+                "value": "10"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XDUMSTAR",
+                "value": "35"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "QPUAD140",
+                "value": "3"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "QPUAE140",
+                "value": "5"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "XDUMSLUT",
+                "value": "39"
+            }
+        },
+        {
+            "condition": {
+                "value": "Success"
+            },
+            "sourceId": {
+                "taskName": "XPUAP147",
+                "value": "25"
+            },
+            "straightEdge": false,
+            "targetId": {
+                "taskName": "XDUMSLUT",
+                "value": "39"
+            }
+        }
+    ],
+    "workflowVertices": [
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPUAD140"
+            },
+            "vertexId": "3",
+            "vertexX": "154.5",
+            "vertexY": "103.5"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPUAC140"
+            },
+            "vertexId": "4",
+            "vertexX": "390.5",
+            "vertexY": "25"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPUAE140"
+            },
+            "vertexId": "5",
+            "vertexX": "508.5",
+            "vertexY": "25"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "QPUAC147"
+            },
+            "vertexId": "10",
+            "vertexX": "920.5",
+            "vertexY": "120"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "XPUAD145"
+            },
+            "vertexId": "22",
+            "vertexX": "390",
+            "vertexY": "182"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "XPUAD147"
+            },
+            "vertexId": "23",
+            "vertexX": "507",
+            "vertexY": "182"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "XPUAG140"
+            },
+            "vertexId": "24",
+            "vertexX": "272.5",
+            "vertexY": "103.5"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "XPUAP147"
+            },
+            "vertexId": "25",
+            "vertexX": "623.5",
+            "vertexY": "182"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "XDUMSTAR"
+            },
+            "vertexId": "35",
+            "vertexX": "34.5",
+            "vertexY": "103.5"
+        },
+        {
+            "alias": null,
+            "conditionExpression": null,
+            "task": {
+                "value": "XDUMSLUT"
+            },
+            "vertexId": "39",
+            "vertexX": "920",
+            "vertexY": "-20"
+        }
+    ]
+}

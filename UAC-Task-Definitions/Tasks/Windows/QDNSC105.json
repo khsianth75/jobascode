@@ -7,7 +7,7 @@
         "snmpNotifications": [],
         "systemOperations": []
     },
-    "agent": "Airflow",
+    "agent": "Hof(Windows & DB connect)",
     "agentCluster": null,
     "agentClusterVar": null,
     "agentVar": null,
